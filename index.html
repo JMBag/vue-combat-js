@@ -10,13 +10,21 @@
 <body>
 <div id="app">
     <section class="row">
+            <div class="title medium-12 columns text-center">
+                <div class="logo">
+                    <img src="./assets/space-invaders.svg"/>
+                </div>
+                VUE JS 2 - THE FINAL BOSS
+            </div>
+    </section>
+    <section class="game row">
         <div class="small-5 columns">
             <h1 class="text-center">YOU</h1>
             <div class="healthbar">
                 <div 
                     class="healthbar inner-healthbar text-center"
                     :style="{width: playerHealth + '%'}">
-                    {{playerHealth}}
+                    {{playerHealth}}%
                 </div>
             </div>
         </div>
@@ -24,19 +32,21 @@
             <h1 class="text-center vs">VS</h1>
         </div>
         <div class="small-5 columns">
-            <h1 class="text-center">MONSTER</h1>
+            <h1 class="text-center">JQUERY</h1>
             <div class="healthbar">
                 <div 
                     class="healthbar inner-healthbar text-center"
                     :style="{width: monsterHealth + '%'}">
-                    {{monsterHealth}}
+                    {{monsterHealth}}%
                 </div>
             </div>
         </div>
     </section>
     <section class="row controls" v-if="!gameIsRunning">
         <div class="small-12 columns">
-            <button id="start-game button-new-game" @click="startGame">START NEW GAME</button>
+            <a href="#" class="button button-new-game" @click="startGame">
+                <span>START NEW GAME</span>
+            </a>
         </div>
     </section>
     <section class="row controls" v-else>
@@ -55,7 +65,7 @@
             </a>
         </div>
     </section>
-    <section class="row log">
+    <section v-if="gameIsRunning" class="row log">
         <div class="small-12 columns">
             <ul>
                 <li>

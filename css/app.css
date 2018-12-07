@@ -3,9 +3,25 @@
     font-family: 'Press Start 2P', cursive;
 }
 
+.title {
+    margin-top: 20px;
+}
+
+.game {
+    margin-top: 10px;
+}
+
 .vs {
     font-size: 0.9em;
     margin-top: 30px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.logo img {
+    height: 100%;
 }
 
 .healthbar {
@@ -247,6 +263,38 @@ button {
 }
 .button-give-up span {
     background-color: #b6b6b6;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(97, 77, 41, 0.8)), to(rgba(248, 248, 248, 0.2)));
+    background-image: -webkit-linear-gradient(#cfcfcfcc, rgba(248, 248, 248, 0.2));
+    background-image: -moz-linear-gradient(#cfcfcfcc, rgba(248, 248, 248, 0.2));
+    background-image: -o-linear-gradient(#cfcfcfcc, rgba(248, 248, 248, 0.2));
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1;
+    text-shadow: 0 -1px 1px rgba(131, 78, 10, 0.7);
+    -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
+    -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;
+    transition: background-color .2s ease-in-out, transform .1s ease-in-out;
+}
+
+/* Start Game Button */
+.button-new-game {
+    -webkit-box-shadow:    0 8px 0 #0077a7, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 8px 0 #0077a7, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 8px 0 #0077a7, 0 15px 20px rgba(0, 0, 0, .35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    color: #fff;
+}
+.button-new-game span {
+    background-color: #0284ac;
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(97, 77, 41, 0.8)), to(rgba(248, 248, 248, 0.2)));
     background-image: -webkit-linear-gradient(#cfcfcfcc, rgba(248, 248, 248, 0.2));
     background-image: -moz-linear-gradient(#cfcfcfcc, rgba(248, 248, 248, 0.2));
