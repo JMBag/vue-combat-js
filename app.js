@@ -12,7 +12,7 @@ new Vue({
             this.monsterHealth = 100;
         },
         attack: function() {
-            /* Player MIN / MAX stats */
+            /* Player turn */
             this.monsterHealth -= this.calculateDamage(3, 10);
             if (this.checkWin()) { return; };
 
@@ -20,7 +20,7 @@ new Vue({
             this.monsterAttacks();
         },
         specialAttack: function() {
-            /* Player MIN / MAX stats */
+            /* Player turn */
             this.monsterHealth -= this.calculateDamage(10, 20);
             if (this.checkWin()) { return; };
 

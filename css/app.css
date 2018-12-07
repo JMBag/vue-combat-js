@@ -1,21 +1,45 @@
 .text-center {
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.vs {
+    font-size: 0.9em;
+    margin-top: 30px;
 }
 
 .healthbar {
     width: 80%;
     height: 40px;
+    line-height: 40px;
     background-color: #eee;
     margin: auto;
     transition: width 500ms;
+    border-radius: 8px;
+}
+
+.inner-healthbar {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9de96+0,8ab66b+44,398235+100;Green+3D+%233 */
+    background: #c9de96; /* Old browsers */
+    background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #c9de96 0%,#8ab66b 44%,#398235 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=0 ); /* IE6-9 */
+    margin: 0; 
+    color: white;
+}
+
+.controls {
+    border-radius: 8px;
 }
 
 .controls, .log {
     margin-top: 30px;
     text-align: center;
-    padding: 10px;
+    padding: 10px 20px 20px 20px;
     border: 1px solid #ccc;
     box-shadow: 0px 3px 6px #ccc;
+    border-radius: 8px;
 }
 
 .turn {
@@ -51,6 +75,7 @@ button {
     padding: 12px;
     box-shadow: 0 1px 1px black;
     margin: 10px;
+    outline: none;
 }
 
 #start-game {
@@ -91,4 +116,152 @@ button {
 
 #give-up:hover {
     background-color: #c7c7c7;
+}
+
+.button {
+    display: inline-block;
+    margin: 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.button span {
+    display: inline-block;
+    padding: 10px 12px;
+    font-size: 13px;
+}
+
+.button:active span {
+    -webkit-transform: translate(0, 4px);
+    -moz-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+}
+/* Button Attack */
+.button-attack {
+    -webkit-box-shadow:    0 8px 0 #c53737, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 8px 0 #c53737, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 8px 0 #c53737, 0 15px 20px rgba(0, 0, 0, .35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    color: #fff;
+}
+.button-attack span {
+    background-color: #d81b1b;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(136, 84, 84, 0.8)), to(rgba(248, 248, 248, 0.2)));
+    background-image: -webkit-linear-gradient(#f99e9ecc, rgba(248, 248, 248, 0.2));
+    background-image: -moz-linear-gradient(rgba(249, 158, 158, 0.8), rgba(248, 248, 248, 0.2));
+    background-image: -o-linear-gradient(rgba(249, 158, 158, 0.8), rgba(248, 248, 248, 0.2));
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1;
+    text-shadow: 0 -1px 1px rgba(122, 30, 30, 0.7);
+    -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
+    -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;
+    transition: background-color .2s ease-in-out, transform .1s ease-in-out;
+}
+
+/* Button Special Attack */
+.button-spe-attack {
+    -webkit-box-shadow:    0 8px 0 #c46415, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 8px 0 #c46415, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 8px 0 #c46415, 0 15px 20px rgba(0, 0, 0, .35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    color: #fff;
+}
+.button-spe-attack span {
+    background-color: #e2742a;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(97, 77, 41, 0.8)), to(rgba(248, 248, 248, 0.2)));
+    background-image: -webkit-linear-gradient(#f9d59ecc, rgba(248, 248, 248, 0.2));
+    background-image: -moz-linear-gradient(#f9d59ecc, rgba(248, 248, 248, 0.2));
+    background-image: -o-linear-gradient(#f9d59ecc, rgba(248, 248, 248, 0.2));
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1;
+    text-shadow: 0 -1px 1px rgba(131, 78, 10, 0.7);
+    -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
+    -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;
+    transition: background-color .2s ease-in-out, transform .1s ease-in-out;
+}
+
+/* Heal Button */
+.button-heal {
+    -webkit-box-shadow:    0 8px 0 #63a30e, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 8px 0 #63a30e, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 8px 0 #63a30e, 0 15px 20px rgba(0, 0, 0, .35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    color: #fff;
+}
+.button-heal span {
+    background-color: #95c737;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(97, 77, 41, 0.8)), to(rgba(248, 248, 248, 0.2)));
+    background-image: -webkit-linear-gradient(#c1e779cc, rgba(248, 248, 248, 0.2));
+    background-image: -moz-linear-gradient(#c1e779cc, rgba(248, 248, 248, 0.2));
+    background-image: -o-linear-gradient(#c1e779cc, rgba(248, 248, 248, 0.2));
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1;
+    text-shadow: 0 -1px 1px rgba(131, 78, 10, 0.7);
+    -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
+    -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;
+    transition: background-color .2s ease-in-out, transform .1s ease-in-out;
+}
+
+/* Give Up Button */
+.button-give-up {
+    -webkit-box-shadow:    0 8px 0 #949494, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 8px 0 #949494, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 8px 0 #949494, 0 15px 20px rgba(0, 0, 0, .35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    color: #fff;
+}
+.button-give-up span {
+    background-color: #b6b6b6;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(97, 77, 41, 0.8)), to(rgba(248, 248, 248, 0.2)));
+    background-image: -webkit-linear-gradient(#cfcfcfcc, rgba(248, 248, 248, 0.2));
+    background-image: -moz-linear-gradient(#cfcfcfcc, rgba(248, 248, 248, 0.2));
+    background-image: -o-linear-gradient(#cfcfcfcc, rgba(248, 248, 248, 0.2));
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1;
+    text-shadow: 0 -1px 1px rgba(131, 78, 10, 0.7);
+    -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
+    -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;
+    transition: background-color .2s ease-in-out, transform .1s ease-in-out;
 }
