@@ -3,17 +3,24 @@ new Vue({
     data: {
         playerHealth: 100,
         monsterHealth: 100,
-        gameIsRunning: false
+        gameIsRunning: false,
+        turns: []
     },
     methods: {
         startGame: function() {
             this.gameIsRunning = true;
             this.playerHealth = 100;
             this.monsterHealth = 100;
+            this.turns = [];
         },
         attack: function() {
             /* Player turn */
-            this.monsterHealth -= this.calculateDamage(3, 10);
+            var player_dmg = this.calculateDamage(3, 10);
+            this.monsterHealth -= player_dmg;
+            this.turns.unshift({
+                isPlayer: true,
+                text: `Player hits Monster for ${player_dmg}!`
+            });
             if (this.checkWin()) { return; };
 
             /* Monster turn */
@@ -21,7 +28,12 @@ new Vue({
         },
         specialAttack: function() {
             /* Player turn */
-            this.monsterHealth -= this.calculateDamage(10, 20);
+            var special_dmg = this.calculateDamage(10, 20);
+            this.monsterHealth -= special_dmg;
+            this.turns.unshift({
+                isPlayer: true,
+                text: `Player hits Monster hard for ${special_dmg}!`
+            });
             if (this.checkWin()) { return; };
 
             /* Monster turn */
@@ -33,13 +45,26 @@ new Vue({
             } else {
                 this.playerHealth = 100;
             }
+            this.turns.unshift({
+                isPlayer: true,
+                text: `Player heals for 10!`
+            });
             this.monsterAttacks();
         },
         giveUp: function() {
             this.gameIsRunning = false;
+            this.turns.unshift({
+                isPlayer: true,
+                text: `Player gave up.. :(`
+            });
         },
         monsterAttacks: function() {
-            this.playerHealth -= this.calculateDamage(5, 12);
+            var mons_dmg = this.calculateDamage(5, 12);
+            this.playerHealth -= mons_dmg;
+            this.turns.unshift({
+                isPlayer: false,
+                text: `Montser hits Player for ${mons_dmg}!`
+            });
             this.checkWin();
         },
         calculateDamage: function(min, max) {

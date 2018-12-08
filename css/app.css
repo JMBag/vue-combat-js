@@ -35,7 +35,6 @@
 }
 
 .inner-healthbar {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9de96+0,8ab66b+44,398235+100;Green+3D+%233 */
     background: #c9de96; /* Old browsers */
     background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Chrome10-25,Safari5.1-6 */
@@ -65,24 +64,43 @@
     font-size: 22px;
 }
 
+.log {
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
 .log ul {
     list-style: none;
     font-weight: bold;
     text-transform: uppercase;
+    padding: 0px;
 }
 
 .log ul li {
     margin: 5px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7em;
+    padding: 5px;
 }
 
 .log ul .player-turn {
-    color: blue;
-    background-color: #e4e8ff;
+    color: white;
+    background: #c5deea; /* Old browsers */
+    background: -moz-linear-gradient(top, #c5deea 0%, #8abbd7 31%, #066dab 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #c5deea 0%,#8abbd7 31%,#066dab 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #c5deea 0%,#8abbd7 31%,#066dab 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', endColorstr='#066dab',GradientType=0 ); /* IE6-9 */
+    border-radius: 5px;
 }
 
 .log ul .monster-turn {
-    color: red;
-    background-color: #ffc0c1;
+    color: white;
+    background: #ff3019; /* Old browsers */
+    background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ff3019 0%,#cf0404 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ff3019 0%,#cf0404 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+    border-radius: 5px;
 }
 
 button {
@@ -307,7 +325,7 @@ button {
     box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
     font-family: 'Press Start 2P', cursive;
     line-height: 1;
-    text-shadow: 0 -1px 1px rgba(131, 78, 10, 0.7);
+    text-shadow: 0 -1px 1px rgba(8, 45, 100, 0.7);
     -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
     -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
     -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;

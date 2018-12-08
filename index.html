@@ -32,7 +32,7 @@
             <h1 class="text-center vs">VS</h1>
         </div>
         <div class="small-5 columns">
-            <h1 class="text-center">JQUERY</h1>
+            <h1 class="text-center">MONSTER</h1>
             <div class="healthbar">
                 <div 
                     class="healthbar inner-healthbar text-center"
@@ -65,11 +65,12 @@
             </a>
         </div>
     </section>
-    <section v-if="gameIsRunning" class="row log">
+    <section v-if="turns.length" class="row log">
         <div class="small-12 columns">
             <ul>
-                <li>
-
+                <li v-for="turn in turns"
+                    :class="{'player-turn': turn.isPlayer, 'monster-turn': !turn.isPlayer}">
+                    {{ turn.text }}
                 </li>
             </ul>
         </div>
