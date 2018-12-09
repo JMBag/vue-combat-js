@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .text-center {
     text-align: center;
     font-family: 'Press Start 2P', cursive;
@@ -5,6 +9,18 @@
 
 .title {
     margin-top: 20px;
+}
+
+.char-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.name {
+    padding-top: 10px;
 }
 
 .game {
@@ -18,6 +34,7 @@
 
 .logo {
     height: 50px;
+    margin: 20px;
 }
 
 .logo img {
@@ -25,7 +42,7 @@
 }
 
 .healthbar {
-    width: 80%;
+    width: 100%;
     height: 40px;
     line-height: 40px;
     background-color: #eee;
@@ -65,7 +82,7 @@
 }
 
 .log {
-    max-height: 500px;
+    max-height: 300px;
     overflow-y: scroll;
 }
 
@@ -83,7 +100,7 @@
     padding: 5px;
 }
 
-.log ul .player-turn {
+.log ul .player-attack {
     color: white;
     background: #c5deea; /* Old browsers */
     background: -moz-linear-gradient(top, #c5deea 0%, #8abbd7 31%, #066dab 100%); /* FF3.6-15 */
@@ -93,13 +110,23 @@
     border-radius: 5px;
 }
 
-.log ul .monster-turn {
+.log ul .monster-attack {
     color: white;
-    background: #ff3019; /* Old browsers */
-    background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ff3019 0%,#cf0404 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ff3019 0%,#cf0404 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+    background: #f2825b; /* Old browsers */
+    background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f2825b 0%,#e55b2b 50%,#f07146 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#f07146',GradientType=0 ); /* IE6-9 */
+    border-radius: 5px;
+}
+
+.log ul .player-healed {
+    color: white;
+    background: #c9de96; /* Old browsers */
+    background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #c9de96 0%,#8ab66b 44%,#398235 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=0 ); /* IE6-9 */
     border-radius: 5px;
 }
 
@@ -172,7 +199,7 @@ button {
     -o-transform: translate(0, 4px);
     transform: translate(0, 4px);
 }
-/* Button Attack */
+/* Attack Button */
 .button-attack {
     -webkit-box-shadow:    0 8px 0 #c53737, 0 15px 20px rgba(0, 0, 0, .35);
     -moz-box-shadow: 0 8px 0 #c53737, 0 15px 20px rgba(0, 0, 0, .35);
@@ -204,7 +231,7 @@ button {
     transition: background-color .2s ease-in-out, transform .1s ease-in-out;
 }
 
-/* Button Special Attack */
+/* Special Attack Button */
 .button-spe-attack {
     -webkit-box-shadow:    0 8px 0 #c46415, 0 15px 20px rgba(0, 0, 0, .35);
     -moz-box-shadow: 0 8px 0 #c46415, 0 15px 20px rgba(0, 0, 0, .35);
