@@ -6,4 +6,4 @@ A very straightforward game where the player fights against a monster, being abl
 
 ## 
 
-![Alt text](vue-combat-js/assets/vue-combat-js-sample.png?raw=true "Optional Title")
+![Alt text](/assets/vue-combat-js-sample.png?raw=true "Optional Title")
